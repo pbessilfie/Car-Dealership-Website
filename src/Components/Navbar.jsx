@@ -1,13 +1,16 @@
 import { FaChevronDown } from "react-icons/fa6";
-import en_US from "/public/usa-flag.png"; // Adjust the path as necessary
-import en_UK from "/public/UK_flag.png"; // Adjust the path as necessary
-import fr_FR from "/public/fr-flag.png";
+import en_US from "/src/assets/usa-flag.png"; // Adjust the path as necessary
+import en_UK from "/src/assets/UK_flag.png"; // Adjust the path as necessary
+import fr_FR from "/src/assets/fr-flag.png";
 import { useState } from "react";
 import { Navlinks } from "../constants";
-import { NavLink } from "react-router-dom";
+import { NavLink, } from "react-router-dom";
 import Button from "./Button";
+import "../App.css";
+
 const Navbar = () => {
   const [isLangOptionOpen, setIsLangOptionOpen] = useState(false);
+ 
   const options = [
     { value: "en_US", label: "EN", icon: en_US },
     { value: "en_UK", label: "EN", icon: en_UK },
@@ -17,8 +20,9 @@ const Navbar = () => {
   const selectedLang = (index) => {
     setLangSelect(options[index]);
   };
+
   return (
-    <div className="bg-white flex items-center justify-between font-lato drop-shadow-md px-20">
+    <div className="bg-white flex items-center justify-between font-lato drop-shadow-md px-20 h-20">
       <div className="relative flex items-center">
         <span className=" text-3xl font-bold text-primaryTextColor px-4">
           LOGO
@@ -44,7 +48,7 @@ const Navbar = () => {
 
         {/* languages dropdown */}
         {isLangOptionOpen && (
-          <div className="absolute right-0 top-16 border border-lineColor  w-32 rounded-lg bg-white overflow-hidden">
+          <div className="absolute right-0 top-12 border border-lineColor  w-32 rounded-lg bg-white overflow-hidden">
             {options.map((option, index) => (
               <div
                 key={option.value}
@@ -71,21 +75,21 @@ const Navbar = () => {
         )}
       </div>
 
-      <nav className=" py-8">
-        <ul className="flex items-center gap-28">
-          {" "}
-          {Navlinks.map((link) => (
-            <li
-              key={link.label}
-              className=" text-xl text-secondaryTextColor hover:text-primaryTextColor"
-            >
-              {" "}
-              <NavLink to={""} className="text-inherit hover:text-inherit">
-                {link.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+      <nav className=" h-full relative  flex items-center my-auto">
+        {Navlinks.map((link) => (
+          <NavLink
+            key={link.value}
+            to={link.path}
+            className={({ isActive }) =>
+              !isActive
+                ? "text-xl font-medium text-secondaryTextColor hover:text-primaryTextColor hover:font-semibold navlinks py-6"
+                : "text-primaryTextColor font-semibold text-xl navlinks py-6 active"
+            }
+          >
+            {link.label}
+          </NavLink>
+        ))}
+        <div className="animation start-home "></div>
       </nav>
 
       <div className="flex gap-4">
