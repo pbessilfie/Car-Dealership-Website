@@ -198,7 +198,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Audi",
+    brand: "Audi",
     category: "Sedan",
     Carname: "RS7",
     production_year: "2023",
@@ -246,7 +246,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "BMW",
+    brand: "BMW",
     category: "SUV",
     Carname: "X5 M",
     production_year: "2023",
@@ -294,7 +294,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Mercedes-Benz",
+    brand: "Mercedes-Benz",
     category: "Coupe",
     Carname: "AMG GT",
     production_year: "2023",
@@ -347,7 +347,7 @@ export const Cars = [
   },
 
   {
-    Brand: "Tesla",
+    brand: "Tesla",
     category: "Sedan",
     Carname: "Model S Plaid",
     production_year: "2023",
@@ -395,7 +395,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Porsche",
+    brand: "Porsche",
     category: "SUV",
     Carname: "Cayenne Turbo",
     production_year: "2023",
@@ -448,7 +448,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Lexus",
+    brand: "Lexus",
     category: "Sedan",
     Carname: "LS 500",
     production_year: "2023",
@@ -496,7 +496,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Jaguar",
+    brand: "Jaguar",
     category: "SUV",
     Carname: "F-Pace SVR",
     production_year: "2023",
@@ -544,7 +544,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Land Rover",
+    brand: "Land Rover",
     category: "SUV",
     Carname: "Range Rover Sport",
     production_year: "2023",
@@ -592,7 +592,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Volvo",
+    brand: "Volvo",
     category: "SUV",
     Carname: "XC90",
     production_year: "2023",
@@ -640,7 +640,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Toyota",
+    brand: "Toyota",
     category: "SUV",
     Carname: "Land Cruiser",
     production_year: "2023",
@@ -688,7 +688,7 @@ export const Cars = [
     },
   },
   {
-    Brand: "Ford",
+    brand: "Ford",
     category: "Truck",
     Carname: "F-150 Raptor",
     production_year: "2023",
