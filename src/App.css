@@ -1,6 +1,7 @@
-:root{
-    --nav-width: 100px;
+:root {
+  --nav-width: 100px;
 }
+
 nav .navlinks {
   text-align: center;
 }
@@ -18,22 +19,19 @@ nav .animation {
 .navlinks:nth-child(1) {
   width: 150px;
 }
- .start-Browse,
+.start-Browse,
 .active:nth-child(1) ~ .animation {
   width: var(--nav-width);
   left: 25px;
 }
 
-
 .navlinks:nth-child(2) {
   width: 150px;
-  
 }
- .start-Search,
+.start-Search,
 .active:nth-child(2) ~ .animation {
   width: var(--nav-width);
   left: 175px;
-  
 }
 
 .navlinks:nth-child(3) {
@@ -53,3 +51,13 @@ nav .animation {
   width: var(--nav-width);
   left: 475px;
 }
+
+/* custom active slide styles */
+/* .swiper-slide-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid yellow;
+} */
