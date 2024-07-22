@@ -15,6 +15,7 @@ export default {
         secondaryTextColor: "#7F8FA4",
         secondaryTextColor2: "#BFC7D1",
         lineColor: "#E1E8EE",
+        mainBGC: "#F5F6F8",
       },
     },
   },
