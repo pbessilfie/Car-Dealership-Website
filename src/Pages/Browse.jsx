@@ -2,6 +2,11 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 import Button from "../Components/Button";
 import MySwiper from "../Components/MySwiper";
 import MySwiper2 from "../Components/MySwiper2";
+import Recommended from "../Components/Recommended";
+import RecentlyAdded from "../Components/RecentlyAdded";
+import RecentlyRented from "../Components/RecentlyRented";
+import Car_Brands from "../Components/Car_Brands";
+import Top_Offers from "../Components/Top_Offers";
 
 const Browse = () => {
   return (
@@ -35,7 +40,7 @@ const Browse = () => {
               categories with the best quality you can ever imagine
             </p>
           </div>
-          <div className="flex gap-1 mb-36">
+          <div className="flex gap-1 mb-36 pl-6">
             <Button
               label={"Buy Now"}
               bstyles={
@@ -50,7 +55,7 @@ const Browse = () => {
             />
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 pl-6">
             <div className=" p-2 bg-secondaryTextColor text-white rounded-full cursor-pointer text-lg">
               <FaFacebookF />
             </div>
@@ -136,7 +141,23 @@ const Browse = () => {
         </div>
       </div>
 
-      
+      {/* recommended cars */}
+      <div className="py-7 flex justify-center items-center mt-20">
+        {" "}
+        <RecentlyAdded />
+      </div>
+      <Car_Brands />
+      <div className="py-7 flex justify-center items-center mt-20">
+        {" "}
+        <Recommended />
+      </div>
+      <div className="py-7 flex justify-center items-center mt-20">
+        <Top_Offers />
+      </div>
+      <div className="py-7 flex justify-center items-center mt-20">
+        {" "}
+        <RecentlyRented />
+      </div>
     </div>
   );
 };
