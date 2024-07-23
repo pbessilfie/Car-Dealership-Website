@@ -11,7 +11,7 @@ const RecentlyRented = () => {
         Discover all newly added rentals
       </p>
       <div className="flex gap-5">
-        {Cars.slice(9, 15).map((car, index) => (
+        {Cars.slice(9, 13).map((car, index) => (
           <Car_Card
             key={index}
             carName={car.Carname}

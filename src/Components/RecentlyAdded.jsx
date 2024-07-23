@@ -11,7 +11,7 @@ const RecentlyAdded = () => {
         Discover all recently added cars
       </p>
       <div className="flex gap-5">
-        {Cars.slice(5, 10).map((car, index) => (
+        {Cars.slice(5, 9).map((car, index) => (
           <Car_Card
             key={index}
             carName={car.Carname}

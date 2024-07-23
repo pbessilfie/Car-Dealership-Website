@@ -9,7 +9,7 @@ const Recommended = () => {
       </h3>
       <p className="text-sm text-secondaryTextColor font-normal mb-9">Discover all recommended offers</p>
       <div className="flex gap-5">
-        {Cars.slice(0,5).map((car,index)=>(
+        {Cars.slice(0,4).map((car,index)=>(
             <Car_Card key={index} carName={car.Carname} price={car.price} condition={car.condition} production_year={car.production_year} reviews={car.reviews} brand={car.brand} mileage={car.mileage} category={car.category}/>
         ))}
       </div>
