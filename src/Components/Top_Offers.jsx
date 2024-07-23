@@ -11,7 +11,7 @@ const Top_Offers = () => {
         The best top offers special for you{" "}
       </p>
 
-      <div className="flex h-96 w-[70vw] rounded-xl overflow-hidden bg-white">
+      <div className="flex h-96 w-[57vw] rounded-xl overflow-hidden bg-white">
         <div className=" w-[444px] h-full space-y-1">
           <img
             src="/src/assets/unsplash_HrbMyWmS7yU.png"
