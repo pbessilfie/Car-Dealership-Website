@@ -1,12 +1,12 @@
-import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { categories } from "../constants";
 import Custom_Checkbox from "./Custom_Checkbox";
 import { CiCalendar } from "react-icons/ci";
 import Button from '../Components/Button'
+import Select_Input from "./Select_Input";
 
 const FilterSidebar = () => {
   return (
-    <div className=" px- bg-white w-80 rounded-md">
+    <div className=" min-h-28 bg-white w-80 rounded-md">
       <div className=" w-full p-6 border-b border-lineColor">
         <span className=" text-lg font-semibold text-primaryTextColor">
           Filters
@@ -34,19 +34,8 @@ const FilterSidebar = () => {
           </div>
 
           {/* brand select input */}
-          <div className=" w-full h-10 rounded-lg border border-lineColor flex">
-            <input
-              type="text"
-              placeholder="Enter brand name"
-              className=" h-full bg-transparent outline-none border-none placeholder:text-base placeholder:font-medium placeholder:text-secondaryTextColor2 p-2 flex-1 text-primaryTextColor"
-            />
-            <div className=" w-10 h-full border-l border-lineColor flex items-center justify-center">
-              <div>
-                <FaChevronUp className=" text-sm mx-auto" />
-                <FaChevronDown className=" text-sm mx-auto" />
-              </div>
-            </div>
-          </div>
+          <Select_Input placeholder={'Enter a brand name'}/>
+          
 
           <div className=" flex items-center justify-between">
             <div className=" w-[100px] h-10 rounded-lg border border-lineColor flex">
