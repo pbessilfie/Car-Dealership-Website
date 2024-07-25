@@ -10,7 +10,7 @@ const Car_Card = ({
   reviews,
   brand,
   mileage,
-  category
+  category,
 }) => {
   const [isFav, setIsFav] = useState(false);
   return (
