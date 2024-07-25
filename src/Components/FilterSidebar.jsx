@@ -1,10 +1,14 @@
 import { categories } from "../constants";
 import Custom_Checkbox from "./Custom_Checkbox";
 import { CiCalendar } from "react-icons/ci";
-import Button from '../Components/Button'
+import Button from "../Components/Button";
 import Select_Input from "./Select_Input";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
-const FilterSidebar = () => {
+const FilterSidebar = ({ setSelectedCriteria, updatedCategories, }) => {
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
   return (
     <div className=" min-h-28 bg-white w-80 rounded-md">
       <div className=" w-full p-6 border-b border-lineColor">
@@ -25,7 +29,15 @@ const FilterSidebar = () => {
             {" "}
             {categories.map((category, index) => (
               <div key={index} className="flex gap-2 items-center mb-2">
-                <Custom_Checkbox />
+                <Custom_Checkbox
+                  category={category}
+                  selectedCategories={selectedCategories}
+                  setSelectedCategories={setSelectedCategories}
+                  updatedCategories={updatedCategories}
+                  setUpdatedCategories={updatedCategories}
+
+                  setSelectedCriteria={setSelectedCriteria}
+                />
                 <span className=" text-sm text-primaryTextColor">
                   {category.category}
                 </span>
@@ -34,8 +46,7 @@ const FilterSidebar = () => {
           </div>
 
           {/* brand select input */}
-          <Select_Input placeholder={'Enter a brand name'}/>
-          
+          <Select_Input placeholder={"Enter a brand name"} />
 
           <div className=" flex items-center justify-between">
             <div className=" w-[100px] h-10 rounded-lg border border-lineColor flex">
@@ -78,7 +89,9 @@ const FilterSidebar = () => {
               <label className=" text-xs text-secondaryTextColor">
                 From:{" "}
                 <div className="relative w-[100px] mt-3 h-10 rounded-lg border border-lineColor">
-                <div className=" absolute -top-2 left-3 bg-white px-1 py-px "><span className=" text-xs text-primaryTextColor">Min</span></div>
+                  <div className=" absolute -top-2 left-3 bg-white px-1 py-px ">
+                    <span className=" text-xs text-primaryTextColor">Min</span>
+                  </div>
                   <input
                     type="text"
                     placeholder="Price"
@@ -93,7 +106,9 @@ const FilterSidebar = () => {
               <label className=" text-xs text-secondaryTextColor">
                 To:{" "}
                 <div className="relative w-[100px] mt-3 h-10 rounded-lg border border-lineColor">
-                <div className=" absolute -top-2 left-3 bg-white px-1 py-px "><span className=" text-xs text-primaryTextColor">Min</span></div>
+                  <div className=" absolute -top-2 left-3 bg-white px-1 py-px ">
+                    <span className=" text-xs text-primaryTextColor">Min</span>
+                  </div>
                   <input
                     type="text"
                     placeholder="Price"
@@ -106,11 +121,23 @@ const FilterSidebar = () => {
         </div>
 
         <div className="py-6">
-            <Button bstyles={'text-white bg-pBlue py-3 text-center text-base rounded-md cursor:pointer'} label={'Apply Filters'}/>
+          <Button
+            bstyles={
+              "text-white bg-pBlue py-3 text-center text-base rounded-md cursor:pointer"
+            }
+            label={"Apply Filters"}
+            // handleClick={() => {
+            //   // setSelectedCriteria(updatedCategories);
+            //   // console.log(updatedCategories);
+            // }}
+          />
         </div>
       </div>
     </div>
   );
 };
-
+FilterSidebar.propTypes = {
+  setSelectedCriteria: PropTypes.func,
+  updatedCategories: PropTypes.array,
+};
 export default FilterSidebar;
