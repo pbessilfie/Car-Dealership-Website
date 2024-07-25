@@ -5,21 +5,24 @@ import { BsFillGridFill, BsGrid } from "react-icons/bs";
 import Search_Result_Cards from "./Search_Result_Cards";
 import { Cars } from "../constants";
 import Car_Card from "./Car_Card";
-
-const Search_Result = () => {
+import PropTypes from "prop-types";
+const Search_Result = ({
+  selectedCriteria,
+  // setSelectedCriteria,
+  // updatedCategories,
+  // setUpdatedCategories,
+}) => {
   const [gridview, setGridview] = useState(false);
   const [listview, setListview] = useState(true);
-//    const [selectedCriteria, setSelectedCriteria] = useState({
-//      categories: [],
-//      brands: [],
-//      price: { min: 0, max: 0 },
-//    });
+  // console.log(selectedCriteria);
+  const filterResults = Cars.filter((car) =>
+    selectedCriteria.includes(car.category)
+  );
   return (
-    
     <div className=" bg-white rounded-md w-[60%]">
       <header className="flex items-center justify-between px-6 py-4 border-b border-lineColor">
         <span className=" text-xl font-semibold text-primaryTextColor">
-          10 matches
+          {filterResults.length} matches
         </span>
 
         <div className=" flex items-center gap-12">
@@ -63,7 +66,7 @@ const Search_Result = () => {
         }
       >
         {" "}
-        {Cars.slice(0, 10).map((car, index) => (
+        {filterResults.map((car, index) => (
           <div key={index}>
             {listview ? (
               <Search_Result_Cards
@@ -94,5 +97,10 @@ const Search_Result = () => {
     </div>
   );
 };
-
+Search_Result.propTypes = {
+  selectedCriteria: PropTypes.object,
+  // setSelectedCriteria: PropTypes.func,
+  // updatedCategories: PropTypes.array,
+  // setUpdatedCategories: PropTypes.array,
+};
 export default Search_Result;
