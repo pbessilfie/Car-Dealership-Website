@@ -17,13 +17,13 @@ const Search_Result_Cards = ({
 
   return (
     <div className=" w-full h-60 overflow-hidden bg-white flex px-6 py-7 border-b border-lineColor">
-      <div className="w-[25%] rounded-md h-full group overflow-hidden ">
+      <div className=" relative w-[25%] rounded-md h-full group overflow-hidden ">
         <img
           src="/src/assets/unsplash_9E1o3CsYmm0.png"
-          className=" object-cover h-full w-full group-hover:scale-110 transition-transform duration-500 relative"
+          className=" object-cover h-full w-full group-hover:scale-110 transition-transform duration-500 "
         />
         <button
-          className="absolute top-3 right-3 backdrop-blur-sm bg-[rgba(0,0,0,0.3)] p-2 text-xl rounded-md"
+          className="absolute top-3 right-3 backdrop-blur-sm bg-[rgba(0,0,0,0.3)] p-1 text-base rounded-md"
           onClick={() => setIsFav(!isFav)}
         >
           {isFav ? (
