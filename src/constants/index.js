@@ -49,13 +49,13 @@ export const Footerlinks = [
 ];
 
 export const categories = [
-  { category: "Hatchbacks", path: "/browse/categories/hatchbacks" },
-  { category: "Sedans", path: "/browse/categories/sedans" },
-  { category: "Coupes", path: "/browse/categories/coupes" },
-  { category: "Vans", path: "/browse/categories/vans" },
-  { category: "Wagons", path: "/browse/categories/wagons" },
-  { category: "SUVs", path: "/browse/categories/suvs" },
-  { category: "Trucks", path: "/browse/categories/trucks" },
+  { category: "Hatchback", path: "/browse/categories/hatchbacks" },
+  { category: "Sedan", path: "/browse/categories/sedans" },
+  { category: "Coupe", path: "/browse/categories/coupes" },
+  { category: "Van", path: "/browse/categories/vans" },
+  { category: "Wagon", path: "/browse/categories/wagons" },
+  { category: "SUV", path: "/browse/categories/suvs" },
+  { category: "Truck", path: "/browse/categories/trucks" },
 ];
 
 export const Cars = [
