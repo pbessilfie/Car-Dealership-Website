@@ -4,9 +4,9 @@ import Select_Input from "./Select_Input";
 
 const Personal_Info = () => {
   return (
-    <div className=" bg-white rounded-md w-[60%]">
+    <div className=" bg-white rounded-md w-[60%] drop-shadow-md">
       <header className="px-6 py-4 border-b border-lineColor">
-        {" "}
+      
         <span className=" text-xl font-semibold text-primaryTextColor">
           Personal Information
         </span>
