@@ -18,8 +18,9 @@ const Security = () => {
         <div className=" w-full drop-shadow-md px-5 py-3 bg-white flex items-center justify-between mb-3">
           <div className="flex gap-4">
             {" "}
-            <div className="relative w-12 h-12 bg-lineColor rounded-full overflow-hidden">
-              <div className="absolute top-0 left-0 bg-pBlue h-full w-[90%] "></div>
+            <div className="relative w-12 h-12 bg-lineColor rounded-full overflow-hidden grid place-items-center">
+            <div className=" bg-white rounded-full w-9 h-9 z-10"></div>
+              <div className="absolute top-0 left-0 bg-pBlue h-16 w-[90%] -rotate-[45deg]"></div>
             </div>
             <div>
               <h3 className=" text-sm font-bold text-primaryTextColor">
