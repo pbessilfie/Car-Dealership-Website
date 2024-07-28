@@ -58,6 +58,129 @@ export const categories = [
   { category: "Truck", path: "/browse/categories/trucks" },
 ];
 
+export const FAQ = [
+  {
+    category: "General Information",
+    questions: [
+      {
+        title: "What is the company about?",
+        answer:
+          "We are a car dealership company that sells a variety of cars from different brands. We offer both new and used cars at competitive prices.",
+      },
+      {
+        title: "For whom the company is made for?",
+        answer:
+          " The company is made for car enthusiasts who are looking to buy a new or used car. We offer a wide selection of vehicles to choose from, catering to different needs and preferences.",
+      },
+      {
+        title: "How it works?",
+        answer:
+          "The company works by providing customers with a platform to browse and search for cars, view detailed information about each vehicle, and contact us for more information or to schedule a test drive.",
+      },
+      {
+        title: "Why should I use the company?",
+        answer:
+          "You should use the company because we offer a wide selection of cars from top brands, competitive prices, and excellent customer service. Whether you are looking for a new or used car, we have something for everyone.",
+      },
+      {
+        title: "How much it cost?",
+        answer:
+          "The cost of our cars varies depending on the brand, model, condition, and other factors. We offer competitive prices for both new and used vehicles, and we also have financing options available for those who need it.",
+      },
+      {
+        title: "The main difference between our company and competitors?",
+        answer:
+          "The main difference between our company and competitors is our commitment to customer service and satisfaction. We go above and beyond to ensure that our customers have a positive experience when buying a car from us. We offer a wide selection of vehicles, competitive prices, and excellent after-sales support to make the car buying process as smooth as possible.",
+      },
+      {
+        title: "What cars can I buy?",
+        answer:
+          "You can buy a variety of cars from different brands, including sedans, SUVs, coupes, hatchbacks, vans, and trucks. We offer both new and used vehicles, so you can choose the one that best fits your needs and budget.",
+      },
+      {
+        title: "How can I buy a car?",
+        answer:
+          "You can buy a car by browsing our inventory, selecting the vehicle you are interested in, and contacting us to schedule a test drive or get more information. Our sales team will be happy to assist you with the buying process and answer any questions you may have.",
+      },
+    ],
+  },
+  {
+    category: "Security & Protection",
+    questions: [
+      {
+        title: "How do you ensure the security of my personal information?",
+        answer:
+          "We use advanced encryption technologies and secure servers to protect your personal information. Our privacy policy outlines how we collect, use, and safeguard your data.",
+      },
+      {
+        title: "Are the cars inspected before sale?",
+        answer:
+          "Yes, all our cars undergo a thorough inspection process to ensure they meet our quality standards. We provide detailed inspection reports for each vehicle.",
+      },
+    ],
+  },
+  {
+    category: "Billing & Delivery",
+    questions: [
+      {
+        title: "What payment methods do you accept?",
+        answer:
+          "We accept various payment methods, including credit/debit cards, bank transfers, and financing options. Please contact our sales team for more details.",
+      },
+      {
+        title: "Do you offer delivery services?",
+        answer:
+          "Yes, we offer delivery services for your convenience. Delivery charges may apply depending on your location. Please contact us for more information.",
+      },
+      {
+        title: "Can I track my delivery?",
+        answer:
+          "Yes, once your car is dispatched, we will provide you with a tracking number so you can monitor the delivery status.",
+      },
+      {
+        title: "What are the delivery times?",
+        answer:
+          "Delivery times vary depending on your location and the availability of the vehicle. We will provide an estimated delivery time when you place your order.",
+      },
+      {
+        title: "Are there any additional fees for delivery?",
+        answer:
+          "Delivery fees may apply depending on your location. We will inform you of any additional charges before you finalize your purchase.",
+      },
+    ],
+  },
+  {
+    category: "My Account",
+    questions: [
+      {
+        title: "How can I create an account?",
+        answer:
+          "You can create an account by clicking on the 'Sign Up' button on our website and filling out the required information. Once registered, you can manage your purchases and preferences.",
+      },
+      {
+        title: "How can I reset my password?",
+        answer:
+          "If you forget your password, click on the 'Forgot Password' link on the login page and follow the instructions to reset it.",
+      },
+    ],
+  },
+  {
+    category: "Purchases & Rentals",
+    questions: [
+      {
+        title: "Can I rent a car from your company?",
+        answer:
+          "Yes, we offer car rental services. You can browse our rental options on our website and contact us to make a reservation.",
+      },
+      {
+        title: "What is your return policy?",
+        answer:
+          "Our return policy allows you to return a car within a specified period if it does not meet your expectations. Please refer to our return policy page for detailed information.",
+      },
+    ],
+  },
+];
+
 export const Cars = [
   {
     brand: "Audi",
