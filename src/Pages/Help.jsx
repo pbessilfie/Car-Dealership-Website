@@ -1,8 +1,11 @@
 import { BiSearchAlt2 } from "react-icons/bi";
 import Button from "../Components/Button";
-import FAQCatNav from "../assets/FAQCatNav";
+import FAQCatNav from "../Components/FAQCatNav";
+import FAQ_Response from "../Components/FAQ_Response";
+import { useState } from "react";
 
 const Help = () => {
+  const [activeCatNav, setActiveCatNav] = useState("General Information");
   return (
     <div className=" bg-mainBGC p-16 ">
       <div className=" rounded-xl bg-white drop-shadow-md flex overflow-hidden h-[80vh]">
@@ -27,13 +30,13 @@ const Help = () => {
                   className=" text-primaryTextColor text-sm placeholder:text-sm placeholder:text-secondaryTextColor h-full flex-1 bg-transparent outline-none"
                 />
 
-                <button><BiSearchAlt2 className=" text-secondaryTextColor text-2xl" /></button>
+                <button>
+                  <BiSearchAlt2 className=" text-secondaryTextColor text-2xl" />
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-
 
         <div className=" w-2/3 px-5 py-32">
           <h2 className=" text-xl text-primaryTextColor font-semibold mb-4">
@@ -43,9 +46,12 @@ const Help = () => {
             Discover all FAQ categories
           </p>
 
-          <div className=" flex justify-between">
+          <div className=" flex justify-between gap-3 ">
             <div className="w-[300px] space-y-10">
-             <FAQCatNav/>
+              <FAQCatNav
+                activeCatNav={activeCatNav}
+                setActiveCatNav={setActiveCatNav}
+              />
 
               <div className=" w-full flex flex-col items-start gap-4">
                 <h2 className=" text-xl text-primaryTextColor font-semibold">
@@ -64,7 +70,7 @@ const Help = () => {
               </div>
             </div>
 
-            <div className=" drop-shadow-md p-3 rounded-lg"></div>
+            <FAQ_Response activeCatNav={activeCatNav} />
           </div>
         </div>
       </div>
