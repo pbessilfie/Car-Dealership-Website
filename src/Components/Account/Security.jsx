@@ -4,8 +4,8 @@ import { GoDotFill } from "react-icons/go";
 import Switch from "../Common/Switch";
 import { CiMobile2 } from "react-icons/ci";
 import { RiLoginBoxLine } from "react-icons/ri";
-
-const Security = () => {
+import PropTypes from "prop-types";
+const Security = ({ setIsPasswordResetPopupOpen }) => {
   return (
     <div className="bg-white rounded-md w-[60%] drop-shadow-md">
       {" "}
@@ -86,9 +86,11 @@ const Security = () => {
               bstyles={
                 " border border-lineColor px-5 hover:drop-shadow-lg py-2 rounded-md text-secondaryTextColor text-sm bg-white"
               }
+              handleClick={() => setIsPasswordResetPopupOpen(true)}
             />
           </div>
         </div>
+
         <div className=" w-full py-3 border-b-2 border-lineColor flex justify-between items-center">
           <div>
             <h3 className=" text-primaryTextColor font-bold text-base">
@@ -174,5 +176,7 @@ const Security = () => {
     </div>
   );
 };
-
+Security.propTypes = {
+  setIsPasswordResetPopupOpen: PropTypes.func,
+};
 export default Security;
