@@ -3,9 +3,12 @@ import Account_Details_Nav from "../Components/Account/Account_Details_Nav";
 import Membership_Info from "../Components/Account/Membership_Info";
 import Personal_Info from "../Components/Account/Personal_Info";
 import Security from "../Components/Account/Security";
+import Edit_Password from "../Components/Popups/Edit_Password";
 
 const Profile = () => {
   const [activeSN, setActiveSN] = useState("Account Information");
+  const [isPasswordResetPopupOpen, setIsPasswordResetPopupOpen] =
+    useState(false);
 
   const activeSettings = () => {
     let key = activeSN;
@@ -13,7 +16,9 @@ const Profile = () => {
       case "Membership Settings":
         return <Membership_Info />;
       case "Security":
-        return <Security />;
+        return (
+          <Security setIsPasswordResetPopupOpen={setIsPasswordResetPopupOpen} />
+        );
 
       default:
         return <Personal_Info />;
@@ -21,8 +26,14 @@ const Profile = () => {
   };
   return (
     <div className=" bg-mainBGC flex items-start justify-center gap-14 py-28">
-      <Account_Details_Nav setActiveSN={setActiveSN} activeSN={activeSN}/>
+      <Account_Details_Nav setActiveSN={setActiveSN} activeSN={activeSN} />
       {activeSettings()}
+
+      {isPasswordResetPopupOpen && (
+        <div className=" fixed top-0 left-0 bg-[rgba(0,0,0,0.4)] h-full w-full grid place-items-center">
+          <Edit_Password isPasswordResetPopupOpen={isPasswordResetPopupOpen}  setIsPasswordResetPopupOpen={setIsPasswordResetPopupOpen}/>
+        </div>
+      )}
     </div>
   );
 };
