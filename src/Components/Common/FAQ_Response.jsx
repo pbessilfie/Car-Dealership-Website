@@ -1,5 +1,5 @@
 import { FaChevronUp } from "react-icons/fa6";
-import { FAQ } from "../constants";
+import { FAQ } from "../../constants";
 import { useState } from "react";
 import PropTypes from "prop-types";
 

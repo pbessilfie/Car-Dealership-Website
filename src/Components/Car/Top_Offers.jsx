@@ -1,5 +1,5 @@
-import { Cars } from "../constants";
-import Button from "./Button";
+import { Cars } from "../../constants";
+import Button from "../Common/Button";
 
 const Top_Offers = () => {
   return (

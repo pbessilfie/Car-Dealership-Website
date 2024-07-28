@@ -1,5 +1,5 @@
-import Category_Card from "../Components/Category_Card";
-import { Cars } from "../constants";
+import Category_Card from "../../Components/Cards/Category_Card";
+import { Cars } from "../../constants";
 
 const Suv = () => {
 return (

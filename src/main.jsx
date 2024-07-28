@@ -3,18 +3,18 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import Browse from "./Pages/Browse.jsx";
+import Browse from "./Pages/Browse/Browse";
 import Search from "./Pages/Search.jsx";
 import Profile from "./Pages/Profile.jsx";
 import Help from "./Pages/Help.jsx";
-import Browse_Categories from "./Pages/Browse_Categories.jsx";
-import Hatchbacks from "./Pages/Hatchbacks.jsx";
-import Sedan from "./Pages/Sedan.jsx";
-import Trucks from "./Pages/Trucks.jsx";
-import Van from "./Pages/Van.jsx";
-import Wagon from "./Pages/Wagon.jsx";
-import Suv from "./Pages/Suv.jsx";
-import Coupe from "./Pages/Coupe.jsx";
+import Browse_Categories from "./Pages/Browse/Browse_Categories.jsx";
+import Hatchbacks from "./Pages/Cars/Hatchbacks.jsx";
+import Sedan from "./Pages/Cars/Sedan.jsx";
+import Trucks from "./Pages/Cars/Trucks.jsx";
+import Van from "./Pages/Cars/Van.jsx";
+import Wagon from "./Pages/Cars/Wagon.jsx";
+import Suv from "./Pages/Cars/Suv.jsx";
+import Coupe from "./Pages/Cars/Coupe.jsx";
 
 const router = createBrowserRouter([
   {

@@ -1,12 +1,11 @@
 import { FaCrown } from "react-icons/fa6";
-import Button from "./Button";
-import Select_Input from "./Select_Input";
+import Button from "../Common/Button";
+import Select_Input from "../Common/Select_Input";
 
 const Personal_Info = () => {
   return (
     <div className=" bg-white rounded-md w-[60%] drop-shadow-md">
       <header className="px-6 py-4 border-b border-lineColor">
-      
         <span className=" text-xl font-semibold text-primaryTextColor">
           Personal Information
         </span>
@@ -46,7 +45,6 @@ const Personal_Info = () => {
 
         {/* personal information details */}
         <div className=" bg-white rounded-lg drop-shadow-md p-6 space-y-7">
-
           {/* personal details form */}
           <div>
             {" "}

@@ -1,12 +1,12 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
-import Button from "../Components/Button";
-import MySwiper from "../Components/MySwiper";
-import MySwiper2 from "../Components/MySwiper2";
-import Recommended from "../Components/Recommended";
-import RecentlyAdded from "../Components/RecentlyAdded";
-import RecentlyRented from "../Components/RecentlyRented";
-import Car_Brands from "../Components/Car_Brands";
-import Top_Offers from "../Components/Top_Offers";
+import Button from "../../Components/Common/Button";
+import MySwiper from "../../Components/Swiper/MySwiper";
+import MySwiper2 from "../../Components/Swiper/MySwiper2";
+import Recommended from "../../Components/Car/Recommended";
+import RecentlyAdded from "../../Components/Car/RecentlyAdded";
+import RecentlyRented from "../../Components/Car/RecentlyRented";
+import Car_Brands from "../../Components/Car/Car_Brands";
+import Top_Offers from "../../Components/Car/Top_Offers";
 import { useNavigate } from "react-router";
 
 const Browse = () => {

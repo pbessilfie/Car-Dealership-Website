@@ -1,11 +1,11 @@
-import Category_Card from "../Components/Category_Card";
-import { Cars } from "../constants";
+import Category_Card from "../../Components/Cards/Category_Card";
+import { Cars } from "../../constants";
 
-const Trucks = () => {
+const Coupe = () => {
   return (
     <div className=" mt-[3%]">
       <div className="grid grid-cols-3 gap-x-5 gap-y-8 place-items-center px-44">
-        {Cars.filter((car) => car.category == "Truck").map((car, index) => (
+        {Cars.filter((car) => car.category == "Coupe").map((car, index) => (
           <Category_Card
             key={index}
             carName={car.Carname}
@@ -23,4 +23,4 @@ const Trucks = () => {
   );
 }
 
-export default Trucks
+export default Coupe

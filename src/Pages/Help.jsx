@@ -1,7 +1,7 @@
 import { BiSearchAlt2 } from "react-icons/bi";
-import Button from "../Components/Button";
-import FAQCatNav from "../Components/FAQCatNav";
-import FAQ_Response from "../Components/FAQ_Response";
+import Button from "../Components/Common/Button";
+import FAQCatNav from "../Components/Common/FAQCatNav";
+import FAQ_Response from "../Components/Common/FAQ_Response";
 import { useState } from "react";
 
 const Help = () => {

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Account_Details_Nav from "../Components/Account_Details_Nav";
-import Membership_Info from "../Components/Membership_Info";
-import Personal_Info from "../Components/Personal_Info";
-import Security from "../Components/Security";
+import Account_Details_Nav from "../Components/Account/Account_Details_Nav";
+import Membership_Info from "../Components/Account/Membership_Info";
+import Personal_Info from "../Components/Account/Personal_Info";
+import Security from "../Components/Account/Security";
 
 const Profile = () => {
   const [activeSN, setActiveSN] = useState("Account Information");

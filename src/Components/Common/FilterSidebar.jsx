@@ -1,12 +1,12 @@
-import { categories } from "../constants";
+import { categories } from "../../constants";
 import Custom_Checkbox from "./Custom_Checkbox";
 import { CiCalendar } from "react-icons/ci";
-import Button from "../Components/Button";
-import Select_Input from "./Select_Input";
+import Button from "../Common/Button";
+import Select_Input from "../Common/Select_Input";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const FilterSidebar = ({ setSelectedCriteria, updatedCategories, }) => {
+const FilterSidebar = ({ setSelectedCriteria, updatedCategories }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   return (
@@ -35,7 +35,6 @@ const FilterSidebar = ({ setSelectedCriteria, updatedCategories, }) => {
                   setSelectedCategories={setSelectedCategories}
                   updatedCategories={updatedCategories}
                   setUpdatedCategories={updatedCategories}
-
                   setSelectedCriteria={setSelectedCriteria}
                 />
                 <span className=" text-sm text-primaryTextColor">

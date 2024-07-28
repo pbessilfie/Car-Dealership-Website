@@ -1,6 +1,6 @@
-import { FaCheck} from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
-import Button from "./Button";
+import Button from "../Common/Button";
 import PropTypes from "prop-types";
 
 const Sub_Card = ({

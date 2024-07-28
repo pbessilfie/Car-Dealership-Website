@@ -1,4 +1,4 @@
-import { Footerlinks } from "../constants";
+import { Footerlinks } from "../../constants";
 import { FaRegCopyright, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 
 const Footer = () => {

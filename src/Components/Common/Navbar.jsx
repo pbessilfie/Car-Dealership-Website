@@ -3,10 +3,10 @@ import en_US from "/src/assets/usa-flag.png"; // Adjust the path as necessary
 import en_UK from "/src/assets/UK_flag.png"; // Adjust the path as necessary
 import fr_FR from "/src/assets/fr-flag.png";
 import { useState } from "react";
-import { Navlinks } from "../constants";
+import { Navlinks } from "../../constants";
 import { NavLink, } from "react-router-dom";
 import Button from "./Button";
-import "../App.css";
+import "../../App.css";
 
 const Navbar = () => {
   const [isLangOptionOpen, setIsLangOptionOpen] = useState(false);

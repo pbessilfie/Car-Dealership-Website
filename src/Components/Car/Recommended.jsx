@@ -1,5 +1,5 @@
-import { Cars } from "../constants";
-import Car_Card from "./Car_Card";
+import { Cars } from "../../constants";
+import Car_Card from "../Cards/Car_Card";
 
 const Recommended = () => {
   return (

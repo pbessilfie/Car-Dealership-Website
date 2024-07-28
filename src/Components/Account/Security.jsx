@@ -1,7 +1,7 @@
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
-import Button from "./Button";
+import Button from "../Common/Button";
 import { GoDotFill } from "react-icons/go";
-import Switch from "./Switch";
+import Switch from "../Common/Switch";
 import { CiMobile2 } from "react-icons/ci";
 import { RiLoginBoxLine } from "react-icons/ri";
 
@@ -19,7 +19,7 @@ const Security = () => {
           <div className="flex gap-4">
             {" "}
             <div className="relative w-12 h-12 bg-lineColor rounded-full overflow-hidden grid place-items-center">
-            <div className=" bg-white rounded-full w-9 h-9 z-10"></div>
+              <div className=" bg-white rounded-full w-9 h-9 z-10"></div>
               <div className="absolute top-0 left-0 bg-pBlue h-16 w-[90%] -rotate-[45deg]"></div>
             </div>
             <div>

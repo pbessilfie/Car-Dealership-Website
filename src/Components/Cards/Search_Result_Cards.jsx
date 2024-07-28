@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa6";
-import Button from "./Button";
+import Button from "../Common/Button";
 
 const Search_Result_Cards = ({
   reviews,

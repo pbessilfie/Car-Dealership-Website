@@ -1,5 +1,5 @@
-import Switch from "./Switch";
-import Sub_Card from "./Sub_Card";
+import Switch from "../Common/Switch";
+import Sub_Card from "../Cards/Sub_Card";
 
 const Membership_Info = () => {
   return (

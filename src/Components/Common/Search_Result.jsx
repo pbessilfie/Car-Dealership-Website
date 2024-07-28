@@ -2,9 +2,9 @@ import { IoIosList } from "react-icons/io";
 import Select_Input from "./Select_Input";
 import { useState } from "react";
 import { BsFillGridFill, BsGrid } from "react-icons/bs";
-import Search_Result_Cards from "./Search_Result_Cards";
-import { Cars } from "../constants";
-import Car_Card from "./Car_Card";
+import Search_Result_Cards from "../Cards/Search_Result_Cards";
+import { Cars } from "../../constants";
+import Car_Card from "../Cards/Car_Card";
 import PropTypes from "prop-types";
 const Search_Result = ({
   selectedCriteria,

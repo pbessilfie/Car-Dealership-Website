@@ -1,5 +1,5 @@
 import { Outlet, useLocation, useNavigate } from "react-router";
-import { categories } from "../constants";
+import { categories } from "../../constants";
 import { NavLink } from "react-router-dom";
 // import "../App.css";
 import { useEffect, useState } from "react";

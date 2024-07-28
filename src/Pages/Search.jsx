@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FilterSidebar from "../Components/FilterSidebar";
-import Search_Result from "../Components/Search_Result";
+import FilterSidebar from "../Components/Common/FilterSidebar";
+import Search_Result from "../Components/Common/Search_Result";
 
 const Search = () => {
   const [selectedCriteria, setSelectedCriteria] = useState([]

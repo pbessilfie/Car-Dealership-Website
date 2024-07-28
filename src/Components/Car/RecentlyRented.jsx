@@ -1,17 +1,17 @@
-import { Cars } from "../constants";
-import Car_Card from "./Car_Card";
+import { Cars } from "../../constants";
+import Car_Card from "../Cards/Car_Card";
 
-const RecentlyAdded = () => {
+const RecentlyRented = () => {
   return (
     <div className="">
       <h3 className=" text-primaryTextColor font-bold text-xl mb-2">
-        Recently Added
+        Recent Rentals
       </h3>
       <p className="text-sm text-secondaryTextColor font-normal mb-9">
-        Discover all recently added cars
+        Discover all newly added rentals
       </p>
       <div className="flex gap-5">
-        {Cars.slice(5, 9).map((car, index) => (
+        {Cars.slice(9, 13).map((car, index) => (
           <Car_Card
             key={index}
             carName={car.Carname}
@@ -29,4 +29,4 @@ const RecentlyAdded = () => {
   );
 }
 
-export default RecentlyAdded
+export default RecentlyRented
