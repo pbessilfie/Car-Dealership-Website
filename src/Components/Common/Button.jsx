@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Button = ({ navigate, label, bstyles, handleClick }) => {
   return (
-    <div className={bstyles} onClick={handleClick}>
+    <div className={`${bstyles} cursor-pointer`} onClick={handleClick}>
       <NavLink to={navigate}>{label}</NavLink>
     </div>
   );
