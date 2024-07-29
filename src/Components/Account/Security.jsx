@@ -5,7 +5,10 @@ import Switch from "../Common/Switch";
 import { CiMobile2 } from "react-icons/ci";
 import { RiLoginBoxLine } from "react-icons/ri";
 import PropTypes from "prop-types";
-const Security = ({ setIsPasswordResetPopupOpen }) => {
+const Security = ({
+  setIsPasswordResetPopupOpen,
+  setIsVerificationPopupOpen,
+}) => {
   return (
     <div className="bg-white rounded-md w-[60%] drop-shadow-md">
       {" "}
@@ -94,7 +97,7 @@ const Security = ({ setIsPasswordResetPopupOpen }) => {
         <div className=" w-full py-3 border-b-2 border-lineColor flex justify-between items-center">
           <div>
             <h3 className=" text-primaryTextColor font-bold text-base">
-              Password
+              Two-step Verification
             </h3>
             <p className=" font-medium text-sm text-secondaryTextColor">
               We recommend requiring a verification
@@ -114,6 +117,7 @@ const Security = ({ setIsPasswordResetPopupOpen }) => {
               bstyles={
                 " border border-lineColor px-5 hover:drop-shadow-lg py-2 rounded-md text-secondaryTextColor text-sm bg-white"
               }
+              handleClick={() => setIsVerificationPopupOpen(true)}
             />
           </div>
         </div>
@@ -178,5 +182,6 @@ const Security = ({ setIsPasswordResetPopupOpen }) => {
 };
 Security.propTypes = {
   setIsPasswordResetPopupOpen: PropTypes.func,
+  setIsVerificationPopupOpen: PropTypes.func,
 };
 export default Security;
