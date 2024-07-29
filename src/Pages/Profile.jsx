@@ -4,11 +4,13 @@ import Membership_Info from "../Components/Account/Membership_Info";
 import Personal_Info from "../Components/Account/Personal_Info";
 import Security from "../Components/Account/Security";
 import Edit_Password from "../Components/Popups/Edit_Password";
+import Verification from "../Components/Popups/Verification";
 
 const Profile = () => {
   const [activeSN, setActiveSN] = useState("Account Information");
   const [isPasswordResetPopupOpen, setIsPasswordResetPopupOpen] =
     useState(false);
+  const [isVerificationPopupOpen, setIsVerificationPopupOpen] = useState(false);
 
   const activeSettings = () => {
     let key = activeSN;
@@ -17,7 +19,10 @@ const Profile = () => {
         return <Membership_Info />;
       case "Security":
         return (
-          <Security setIsPasswordResetPopupOpen={setIsPasswordResetPopupOpen} />
+          <Security
+            setIsPasswordResetPopupOpen={setIsPasswordResetPopupOpen}
+            setIsVerificationPopupOpen={setIsVerificationPopupOpen}
+          />
         );
 
       default:
@@ -31,7 +36,18 @@ const Profile = () => {
 
       {isPasswordResetPopupOpen && (
         <div className=" fixed top-0 left-0 bg-[rgba(0,0,0,0.4)] h-full w-full grid place-items-center">
-          <Edit_Password isPasswordResetPopupOpen={isPasswordResetPopupOpen}  setIsPasswordResetPopupOpen={setIsPasswordResetPopupOpen}/>
+          <Edit_Password
+            isPasswordResetPopupOpen={isPasswordResetPopupOpen}
+            setIsPasswordResetPopupOpen={setIsPasswordResetPopupOpen}
+          />
+        </div>
+      )}
+      {isVerificationPopupOpen && (
+        <div className=" fixed top-0 left-0 bg-[rgba(0,0,0,0.4)] h-full w-full grid place-items-center">
+          <Verification
+            // isVerificationPopupOpen={isVerificationPopupOpen}
+            setIsVerificationPopupOpen={setIsVerificationPopupOpen}
+          />
         </div>
       )}
     </div>
