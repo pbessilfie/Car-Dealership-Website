@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa6";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router";
 
 const Car_Card = ({
   carName,
@@ -13,8 +14,12 @@ const Car_Card = ({
   category,
 }) => {
   const [isFav, setIsFav] = useState(false);
+  const navigate = useNavigate();
   return (
-    <div className=" w-64 h-96 rounded-xl overflow-hidden bg-white drop-shadow-md flex flex-col">
+    <div
+      className=" w-64 h-96 rounded-xl overflow-hidden bg-white drop-shadow-md flex flex-col"
+      onClick={() => navigate("/browse/vehicle-details")}
+    >
       <div className="relative w-full h-36 group ">
         <img
           src="/src/assets/unsplash_9E1o3CsYmm0.png"

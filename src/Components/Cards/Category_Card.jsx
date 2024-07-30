@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa6";
 import PropTypes from "prop-types";
-
+import { useNavigate } from "react-router";
 
 const Category_Card = ({
   carName,
@@ -13,10 +13,13 @@ const Category_Card = ({
   mileage,
   category,
 }) => {
-      const [isFav, setIsFav] = useState(false);
-
+  const [isFav, setIsFav] = useState(false);
+  const navigate = useNavigate();
   return (
-    <div className=" w-[484px] h-56 rounded-xl overflow-hidden bg-white drop-shadow-md flex">
+    <div
+      className=" w-[484px] h-56 rounded-xl overflow-hidden bg-white drop-shadow-md flex"
+      onClick={() => navigate("/browse/vehicle-details")}
+    >
       <button
         className="absolute top-4 right-4 backdrop-blur-sm bg-[rgba(0,0,0,0.3)] p-1 text-lg rounded-md"
         onClick={() => setIsFav(!isFav)}
