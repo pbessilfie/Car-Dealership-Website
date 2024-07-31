@@ -3,12 +3,14 @@ import CarDescription from "../../Components/Car/CarDescription";
 import { useState } from "react";
 import CarSpecs from "../../Components/Car/CarSpecs";
 import VehiclePerformanceScore from "../../Components/Car/VehiclePerformanceScore";
+import Recommended from "../../Components/Car/Recommended";
+import CarReview from "../../Components/Car/CarReview";
 
 const SingleCarDetails = () => {
   const [isFav, setIsFav] = useState(false);
 
   return (
-    <div className=" bg-mainBGC py-10 px-32">
+    <div className=" bg-mainBGC py-10 px-32 space-y-14">
       <div className="  flex gap-6 h-[650px] mb-8">
         <div className="relative rounded-xl flex-1 bg-secondaryTextColor2 h-full overflow-hidden">
           <video
@@ -47,6 +49,8 @@ const SingleCarDetails = () => {
         <CarSpecs />
         <VehiclePerformanceScore />
       </div>
+      <CarReview />
+      <Recommended end={6} />
     </div>
   );
 };
