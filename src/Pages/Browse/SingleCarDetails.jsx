@@ -5,6 +5,7 @@ import CarSpecs from "../../Components/Car/CarSpecs";
 import VehiclePerformanceScore from "../../Components/Car/VehiclePerformanceScore";
 import Recommended from "../../Components/Car/Recommended";
 import CarReview from "../../Components/Car/CarReview";
+import EI_Pictures from "../../Components/Car/EI_Pictures";
 
 const SingleCarDetails = () => {
   const [isFav, setIsFav] = useState(false);
@@ -47,6 +48,7 @@ const SingleCarDetails = () => {
 
       <div className=" bg-white rounded-lg drop-shadow-md p-8">
         <CarSpecs />
+        <EI_Pictures/>
         <VehiclePerformanceScore />
       </div>
       <CarReview />
