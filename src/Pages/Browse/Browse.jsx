@@ -167,7 +167,7 @@ const Browse = () => {
       <Car_Brands />
       <div className="py-7 flex justify-center items-center mt-20">
         {" "}
-        <Recommended />
+        <Recommended end={4} />
       </div>
       <div className="py-7 flex justify-center items-center mt-20">
         <Top_Offers />
