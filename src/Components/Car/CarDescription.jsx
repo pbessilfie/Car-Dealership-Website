@@ -83,11 +83,12 @@ const CarDescription = () => {
       />
 
       {/* price */}
-      <div className="border border-lineColor rounded-md py-3 ">
-        <h3 className=" text-sm text-center text-secondaryTextColor">
-          From: Ghc 12,000
-        </h3>
-      </div>
+      <Button
+        bstyles={
+          "border border-lineColor rounded-md py-3 text-sm text-center text-secondaryTextColor"
+        }
+        label={"Add to cart"}
+      />
     </div>
   );
 };
