@@ -3304,3 +3304,145 @@ export const Cars = [
     },
   },
 ];
+
+export const Reviews = [
+  {
+    product: "The Car Name",
+    date: "15th February 2024",
+    reviewer: "Kwame Mensah",
+    rating: 5,
+    highlights: [
+      "Impressive fuel economy",
+      "Smooth ride",
+      "Spacious interior",
+      "User-friendly infotainment system",
+      "Advanced safety features",
+    ],
+    summary:
+      "Absolutely love this car! The fuel efficiency is top-notch, and the ride is incredibly smooth. The interior is spacious and comfortable, making long drives a pleasure. Highly recommend!",
+  },
+  {
+    product: "The Car Name",
+    date: "10th March 2024",
+    reviewer: "Ama Osei",
+    rating: 4,
+    highlights: [
+      "Adaptive cruise control",
+      "Lane-keeping assist",
+      "Easy-to-use infotainment system",
+    ],
+    summary:
+      "Great car with excellent safety features. The adaptive cruise control and lane-keeping assist are very helpful. The infotainment system is easy to use. Could improve on the trunk space, though.",
+  },
+  {
+    product: "The Car Name",
+    date: "10th March 2024",
+    reviewer: "Ama Osei",
+    rating: 4,
+    highlights: [
+      "Adaptive cruise control",
+      "Lane-keeping assist",
+      "Easy-to-use infotainment system",
+    ],
+    summary:
+      "Great car with excellent safety features. The adaptive cruise control and lane-keeping assist are very helpful. The infotainment system is easy to use. Could improve on the trunk space, though.",
+  },
+  {
+    product: "The Car Name",
+    date: "5th April 2024",
+    reviewer: "Kofi Asante",
+    rating: 4,
+    highlights: [
+      "Stylish design",
+      "Reliable performance",
+      "Impressive fuel economy",
+    ],
+    summary:
+      "Stylish and reliable. The car handles well on both city roads and highways. The fuel economy is impressive, but I wish the acceleration was a bit quicker.",
+  },
+  {
+    product: "The Car Name",
+    date: "20th April 2024",
+    reviewer: "Nana Yaa",
+    rating: 5,
+    highlights: [
+      "Luxurious interior",
+      "Smooth ride",
+      "Advanced safety features",
+    ],
+    summary:
+      "This car is a joy to drive! The interior is luxurious, and the ride is smooth. The advanced safety features give me peace of mind. Worth every penny.",
+  },
+  {
+    product: "The Car Name",
+    date: "1st May 2024",
+    reviewer: "Michael Owusu",
+    rating: 4,
+    highlights: [
+      "Efficient and comfortable",
+      "User-friendly infotainment system",
+      "Sleek design",
+    ],
+    summary:
+      "Very efficient and comfortable. The infotainment system is user-friendly, and the car's design is sleek. However, the back seats could use a bit more legroom.",
+  },
+  {
+    product: "The Car Name",
+    date: "15th May 2024",
+    reviewer: "Akosua Agyeman",
+    rating: 5,
+    highlights: ["Great fuel economy", "Smooth ride", "Spacious interior"],
+    summary:
+      "Fantastic car! The fuel economy is great, and the ride is smooth. The spacious interior and advanced safety features make it perfect for family trips.",
+  },
+  {
+    product: "The Car Name",
+    date: "30th May 2024",
+    reviewer: "Daniel Tetteh",
+    rating: 4,
+    highlights: ["Reliable and stylish", "Comfortable ride", "Great features"],
+    summary:
+      "Reliable and stylish. The car offers a comfortable ride and has a lot of great features. The only downside is the slightly high maintenance cost.",
+  },
+  {
+    product: "The Car Name",
+    date: "10th June 2024",
+    reviewer: "Efua Mensah",
+    rating: 5,
+    highlights: [
+      "Efficient and comfortable",
+      "Advanced features",
+      "Adaptive cruise control",
+    ],
+    summary:
+      "I love everything about this car! It's efficient, comfortable, and packed with advanced features. The adaptive cruise control is a game-changer.",
+  },
+  {
+    product: "The Car Name",
+    date: "25th June 2024",
+    reviewer: "Yaw Boateng",
+    rating: 4,
+    highlights: [
+      "Smooth ride",
+      "Spacious interior",
+      "Easy-to-navigate infotainment system",
+    ],
+    summary:
+      "Great car with a smooth ride and spacious interior. The infotainment system is easy to navigate. Could use a bit more power under the hood.",
+  },
+  {
+    product: "The Car Name",
+    date: "5th July 2024",
+    reviewer: "Abena Koomson",
+    rating: 5,
+    highlights: [
+      "Reliable",
+      "Stylish",
+      "Fun to drive",
+      "Top-notch safety features",
+      "Impressive fuel economy",
+    ],
+    summary:
+      "This car exceeds my expectations! It's reliable, stylish, and fun to drive. The safety features are top-notch, and the fuel economy is impressive.",
+  },
+];
