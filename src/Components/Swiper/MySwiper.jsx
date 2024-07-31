@@ -8,7 +8,7 @@ import "../../App.css";
 import { Autoplay } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
-const SlideNextButton = () => {
+const SlideButton = () => {
   const swiper = useSwiper();
 
   return (
@@ -81,6 +81,7 @@ export default function MySwiper() {
             />
           </div>
         </SwiperSlide>
+        {/* <SlideButton /> */}
       </Swiper>
     </div>
   );
