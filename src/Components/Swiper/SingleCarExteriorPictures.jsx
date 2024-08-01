@@ -47,28 +47,28 @@ const SingleCarExteriorPictures = () => {
 
           <SwiperSlide className=" bg-cover bg-center overflow-hidden ">
             <img
-              src="/src/assets/unsplash_HrbMyWmS7yU.png"
+              src="/src/assets/single car images/Exterior/1105382.jpg"
               alt="car image"
               className=" w-full h-full object-cover"
             />
           </SwiperSlide>
           <SwiperSlide className=" bg-cover bg-center overflow-hidden">
             <img
-              src="/src/assets/unsplash_v9ARc6COwfg.png"
+              src="/src/assets/single car images/Exterior/11678-audirs7sportbackperformanceascaribluematt042-1.jpg"
               alt="car image"
               className=" w-full h-full object-cover"
             />
           </SwiperSlide>
           <SwiperSlide className=" bg-cover bg-center overflow-hidden">
             <img
-              src="/src/assets/unsplash_iw0D_9wHnf4.png"
+              src="/src/assets/single car images/Exterior/3241492.jpg"
               alt="car image"
               className=" w-full h-full object-cover"
             />
           </SwiperSlide>
           <SwiperSlide className=" bg-cover bg-center overflow-hidden">
             <img
-              src="/src/assets/unsplash_9E1o3CsYmm0.png"
+              src="/src/assets/single car images/Exterior/1672696.jpg"
               alt="car image"
               className=" w-full h-full object-cover"
             />
