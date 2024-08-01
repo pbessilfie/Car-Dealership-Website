@@ -3,6 +3,7 @@ import { IoMdLock } from "react-icons/io";
 import { MdCardMembership } from "react-icons/md";
 import { PiSignOutBold } from "react-icons/pi";
 import PropTypes from "prop-types";
+import { TbBrandCashapp } from "react-icons/tb";
 
 const Account_Details_Nav = ({ activeSN, setActiveSN }) => {
   const navItems = [
@@ -27,6 +28,14 @@ const Account_Details_Nav = ({ activeSN, setActiveSN }) => {
       icon: (
         <div className=" rounded-full text-white text-2xl p-2 bg-[#21BB9B]">
           <MdCardMembership />
+        </div>
+      ),
+    },
+    {
+      label: "Billing and Payments",
+      icon: (
+        <div className=" rounded-full text-white text-2xl p-2 bg-yellow-400">
+          <TbBrandCashapp />
         </div>
       ),
     },
