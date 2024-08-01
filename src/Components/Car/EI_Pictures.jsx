@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import SingleCarExteriorPictures from "../Swiper/SingleCarExteriorPictures";
+import SingleCarInteriorPictures from "../Swiper/SingleCarInteriorPictures";
 
 const EI_Pictures = () => {
   const navlinks = ["Exterior", "Interior"];
@@ -35,8 +36,11 @@ const EI_Pictures = () => {
           ></div>
         </div>
       </nav>
-
-      <SingleCarExteriorPictures/>
+      {activeNav === "Exterior" ? (
+        <SingleCarExteriorPictures />
+      ) : (
+        <SingleCarInteriorPictures />
+      )}
     </div>
   );
 };
