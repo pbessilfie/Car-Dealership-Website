@@ -46,7 +46,7 @@ const SingleCarDetails = () => {
         <CarDescription />
       </div>
 
-      <div className=" bg-white rounded-lg drop-shadow-md p-8">
+      <div className=" bg-white rounded-lg drop-shadow-md p-8 space-y-12">
         <CarSpecs />
         <EI_Pictures/>
         <VehiclePerformanceScore />
