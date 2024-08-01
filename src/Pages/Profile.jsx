@@ -5,6 +5,7 @@ import Personal_Info from "../Components/Account/Personal_Info";
 import Security from "../Components/Account/Security";
 import Edit_Password from "../Components/Popups/Edit_Password";
 import Verification from "../Components/Popups/Verification";
+import Billing from "../Components/Account/Billing";
 
 const Profile = () => {
   const [activeSN, setActiveSN] = useState("Account Information");
@@ -17,6 +18,8 @@ const Profile = () => {
     switch (key) {
       case "Membership Settings":
         return <Membership_Info />;
+      case "Billing and Payments":
+        return <Billing />;
       case "Security":
         return (
           <Security
