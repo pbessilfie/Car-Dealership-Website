@@ -10,7 +10,7 @@ const FilterSidebar = ({ setSelectedCriteria, updatedCategories }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   return (
-    <div className=" min-h-28 bg-white w-80 rounded-md">
+    <div className=" h-fit bg-white w-80 rounded-md">
       <div className=" w-full p-6 border-b border-lineColor">
         <span className=" text-lg font-semibold text-primaryTextColor">
           Filters
