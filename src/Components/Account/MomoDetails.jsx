@@ -11,7 +11,7 @@ Momo Details        </h3>
         </p>
       </div>
 
-      <form>
+      <form className="">
         <h4 className=" text-base font-bold text-primaryTextColor mb-7">
           Personal Info
         </h4>
@@ -60,7 +60,7 @@ Momo Details        </h3>
         </div>
         <Button
           label={"Add"}
-          bstyles={"text-white bg-pBlue rounded-md py-2 px-16 w-fit mx-auto"}
+          bstyles={"text-white bg-pBlue rounded-md py-2 px-16 w-fit mx-auto mt-7"}
         />
       </form>
     </div>
