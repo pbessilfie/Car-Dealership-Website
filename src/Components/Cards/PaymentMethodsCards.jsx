@@ -1,7 +1,8 @@
 // import { useState } from "react";
+import { useState } from "react";
 import Custom_Radio_Button from "../Common/Custom_Radio_Button";
-
-const PaymentMethodsCards = () => {
+import PropTypes from "prop-types";
+const PaymentMethodsCards = ({ setIndex }) => {
   const paymentMethods = [
     {
       type: "Credit Card",
@@ -25,15 +26,24 @@ const PaymentMethodsCards = () => {
     },
   ];
 
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const handleRadioChange = (index) => {
+    setSelectedIndex(index);
+  };
   return (
     <div className=" border-b border-lineColor p-6 grid grid-cols-2 gap-5">
       {paymentMethods.map((paymentMethod, index) => (
         <div
           key={index}
           className=" border border-lineColor rounded-md p-5 flex justify-between cursor-pointer"
+          onClick={() => {
+            handleRadioChange(index);
+            setIndex(index);
+          }}
         >
           <div>
-            <Custom_Radio_Button />
+            <Custom_Radio_Button activeRadio={selectedIndex === index} />
             <h3 className=" text-lg font-semibold text-primaryTextColor mt-5">
               {paymentMethod.type}
             </h3>
@@ -47,11 +57,12 @@ const PaymentMethodsCards = () => {
             width={100}
             // className=" h-full object-cover"
           />
-       
         </div>
       ))}
     </div>
   );
 };
-
+PaymentMethodsCards.propTypes = {
+  setIndex: PropTypes.func.isRequired,
+};
 export default PaymentMethodsCards;
