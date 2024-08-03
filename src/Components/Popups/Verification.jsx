@@ -2,13 +2,19 @@ import { LiaTimesCircleSolid } from "react-icons/lia";
 import { TbAsteriskSimple } from "react-icons/tb";
 import Button from "../Common/Button";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import PropTypes from 'prop-types'
 
 const Verification = ({ setIsVerificationPopupOpen}) => {
   const [verificationProgress, setVerificationProgress] = useState(false);
 
   return (
-    <div className="relative rounded-xl bg-white p-36">
+    <motion.div
+      initial={{ y: "-100%" }}
+      animate={{ y: "5%", }}
+      transition={{ duration: 1 }}
+      className="relative rounded-xl bg-white p-36"
+    >
       <div className=" w-[500px] flex flex-col items-center gap-10">
         <img src="/src/assets/ver-image.png" width={60} />
         <p className=" text-sm text-primaryTextColor text-center">
@@ -87,7 +93,7 @@ const Verification = ({ setIsVerificationPopupOpen}) => {
           ></div>{" "}
         </div>
         <Button
-          label={!verificationProgress?"Next":'Save'}
+          label={!verificationProgress ? "Next" : "Save"}
           bstyles={"bg-pGreen text-white rounded-md text-sm py-2 px-5"}
           handleClick={() => setVerificationProgress(true)}
         />{" "}
@@ -97,7 +103,7 @@ const Verification = ({ setIsVerificationPopupOpen}) => {
         className=" text-pRed text-3xl absolute top-7 right-7 cursor-pointer"
         onClick={() => setIsVerificationPopupOpen(false)}
       />
-    </div>
+    </motion.div>
   );
 };
 
