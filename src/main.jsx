@@ -16,6 +16,7 @@ import Wagon from "./Pages/Cars/Wagon.jsx";
 import Suv from "./Pages/Cars/Suv.jsx";
 import Coupe from "./Pages/Cars/Coupe.jsx";
 import SingleCarDetails from "./Pages/Browse/SingleCarDetails.jsx";
+import SignIn from "./Pages/SignIn.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
       { path: "/search", element: <Search /> },
       { path: "/profile", element: <Profile /> },
       { path: "/help", element: <Help /> },
+      { path: "/sign-in", element: <SignIn /> },
       { path: "/browse/vehicle-details", element: <SingleCarDetails /> },
     ],
   },
