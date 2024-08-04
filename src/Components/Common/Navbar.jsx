@@ -4,13 +4,13 @@ import en_UK from "/src/assets/UK_flag.png"; // Adjust the path as necessary
 import fr_FR from "/src/assets/fr-flag.png";
 import { useState } from "react";
 import { Navlinks } from "../../constants";
-import { NavLink, } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Button from "./Button";
 import "../../App.css";
 
 const Navbar = () => {
   const [isLangOptionOpen, setIsLangOptionOpen] = useState(false);
- 
+
   const options = [
     { value: "en_US", label: "EN", icon: en_US },
     { value: "en_UK", label: "EN", icon: en_UK },
@@ -94,6 +94,7 @@ const Navbar = () => {
 
       <div className="flex gap-4">
         <Button
+          navigate={"/sign-in"}
           label={"Log In"}
           bstyles={
             " border border-lineColor px-8 hover:drop-shadow-lg py-2 rounded-md text-secondaryTextColor text-lg bg-white"
