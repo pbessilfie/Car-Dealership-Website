@@ -1,8 +1,23 @@
 import { useNavigate } from "react-router";
 import Button from "../Components/Common/Button";
 import Select_Input from "../Components/Common/Select_Input";
-import Custom_Checkbox from "../Components/Common/Custom_Checkbox";
+import { FaCheck } from "react-icons/fa6";
+import { useState } from "react";
 
+const Checkbox = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  return (
+    <div
+      className={`w-5 h-5 border border-lineColor rounded-sm flex items-center justify-center cursor-pointer ${
+        isChecked ? "bg-pBlue" : "bg-white"
+      }`}
+      onClick={() => setIsChecked(!isChecked)}
+    >
+      {isChecked && <FaCheck className="text-sm font-medium text-white" />}
+    </div>
+  );
+};
 const Signup = () => {
   const navigate = useNavigate();
   return (
@@ -11,7 +26,7 @@ const Signup = () => {
         <div className=" absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.3)] -z-10"></div>
         <div className="absolute top-0 left-0 h-full w-full -z-10">
           <img
-            src="/src/assets/billing/si-image.png"
+            src="/src/assets/billing/su-image.png"
             className=" h-full w-full object-cover"
           />
         </div>
@@ -30,7 +45,7 @@ const Signup = () => {
       </div>
 
       <div className="w-1/2 flex flex-col items-center justify-evenly ">
-        <form className=" space-y-8 w-fit">
+        <form className=" space-y-4 w-fit">
           <h3 className=" text-primaryTextColor text-xl font-semibold mb-2 text-center">
             Welcome to Logo{" "}
           </h3>
@@ -73,7 +88,11 @@ const Signup = () => {
             </div>
           </div>
 
-          <Select_Input icon placeholder={"USA"} />
+          <div className=" space-y-2">
+            <label className=" text-sm text-secondaryTextColor">Country</label>
+            <Select_Input icon placeholder={"USA"} />
+          </div>
+
           <div className=" space-y-2">
             {" "}
             <label className=" text-sm text-secondaryTextColor">Password</label>
@@ -98,9 +117,22 @@ const Signup = () => {
               />
             </div>
           </div>
-          {/* <div >
-            <Custom_Checkbox/> <span>I want to receive email from LOGO</span>
-          </div> */}
+
+          <div className=" space-y-2">
+            {" "}
+            <div className=" flex items-center gap-2">
+              <Checkbox />
+              <span className=" text-secondaryTextColor text-sm">
+                I want to receive email from LOGO
+              </span>
+            </div>
+            <div className=" flex items-center gap-2">
+              <Checkbox />
+              <span className=" text-secondaryTextColor text-sm">
+                I agree to the terms, policies, and fees{" "}
+              </span>
+            </div>
+          </div>
 
           <Button
             label={"Sign up"}
