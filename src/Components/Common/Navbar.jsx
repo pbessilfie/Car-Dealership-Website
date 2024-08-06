@@ -102,6 +102,7 @@ const Navbar = () => {
         />
         <Button
           label={"Sign Up"}
+          navigate={"/sign-up"}
           bstyles={
             " bg-pBlue text-white px-8 hover:drop-shadow-lg py-2 rounded-md text-lg"
           }
