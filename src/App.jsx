@@ -5,7 +5,7 @@ import Footer from "./Components/Common/Footer";
 function App() {
   return (
     <main
-      className=" font-lato
+      className=" font-lato overflow-hidden
     "
     >
       <Navbar />
