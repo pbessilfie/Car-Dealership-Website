@@ -1,4 +1,4 @@
-import { FaChevronDown } from "react-icons/fa6";
+import { FaBell, FaCartShopping, FaChevronDown } from "react-icons/fa6";
 import en_US from "/src/assets/usa-flag.png"; // Adjust the path as necessary
 import en_UK from "/src/assets/UK_flag.png"; // Adjust the path as necessary
 import fr_FR from "/src/assets/fr-flag.png";
@@ -7,9 +7,11 @@ import { Navlinks } from "../../constants";
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
 import "../../App.css";
+import Notification from "../Popups/Notification";
 
 const Navbar = () => {
   const [isLangOptionOpen, setIsLangOptionOpen] = useState(false);
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
   const options = [
     { value: "en_US", label: "EN", icon: en_US },
@@ -22,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white flex items-center justify-between font-lato drop-shadow-md px-20 h-20">
+    <div className=" sticky top-0 left-0 bg-white flex items-center justify-between font-lato drop-shadow-md px-20 h-20 z-50">
       <div className="relative flex items-center">
         <span className=" text-3xl font-bold text-primaryTextColor px-4">
           LOGO
@@ -92,7 +94,7 @@ const Navbar = () => {
         <div className="animation start-home "></div>
       </nav>
 
-      <div className="flex gap-4">
+      {/* <div className="flex gap-4">
         <Button
           navigate={"/sign-in"}
           label={"Log In"}
@@ -107,7 +109,49 @@ const Navbar = () => {
             " bg-pBlue text-white px-8 hover:drop-shadow-lg py-2 rounded-md text-lg"
           }
         />
+      </div> */}
+
+      <div className="flex items-center text-lineColor ">
+        <div
+          className={`border-r-2 border-l-2 px-6 py-2 border-lineColor ${
+            isNotificationOpen && " border-r-primaryTextColor"
+          }`}
+        >
+          {" "}
+          <FaCartShopping className=" text-secondaryTextColor text-xl cursor-pointer" />
+        </div>
+
+        <div
+          className={`border-r-2 px-6 py-2 border-lineColor ${
+            isNotificationOpen && " bg-lineColor text-primaryTextColor"
+          }`}
+        >
+          {" "}
+          <button className=" relative">
+            <FaBell
+              className={`${
+                isNotificationOpen
+                  ? "text-primaryTextColor"
+                  : "text-secondaryTextColor"
+              }  text-xl cursor-pointer`}
+              onClick={() => setIsNotificationOpen(true)}
+            />
+            <div className="border border-white bg-pRed text-white text-xs rounded-full w-3 h-3 grid place-items-center  absolute -right-1 -top-1"></div>
+          </button>
+        </div>
+        <div className=" px-6">
+          <div className=" w-12 h-12 rounded-full overflow-hidden cursor-pointer">
+            <img
+              src="/src/assets/profile-pic.jpg"
+              alt="profile-pic"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
       </div>
+      {isNotificationOpen && (
+        <Notification setIsNotificationOpen={setIsNotificationOpen} />
+      )}
     </div>
   );
 };
