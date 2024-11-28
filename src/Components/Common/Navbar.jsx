@@ -2,6 +2,8 @@ import { FaBell, FaCartShopping, FaChevronDown } from "react-icons/fa6";
 import en_US from "../../assets/usa-flag.png"; // Adjust the path as necessary
 import en_UK from "../../assets/UK_flag.png"; // Adjust the path as necessary
 import fr_FR from "../../assets/fr-flag.png";
+import logo from "../../assets/AB Autohub Motors logo.png";
+import profilePic from "../../assets/profile-pic.jpg"
 import { useState } from "react";
 import { Navlinks } from "../../constants";
 import { NavLink } from "react-router-dom";
@@ -29,7 +31,7 @@ const Navbar = () => {
           LOGO
         </span> */}
         <img
-          src="src/assets/AB Autohub Motors logo.png"
+          src={logo}
           alt="company logo"
           width={100}
           className=" px-4"
@@ -147,7 +149,7 @@ const Navbar = () => {
         <div className=" px-6">
           <div className=" w-12 h-12 rounded-full overflow-hidden cursor-pointer">
             <img
-              src="../../assets/profile-pic.jpg"
+              src={profilePic}
               alt="profile-pic"
               className="h-full w-full object-cover"
             />

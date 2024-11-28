@@ -1,12 +1,13 @@
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import PropTypes from "prop-types";
+import usaFlag from "../../assets/usa-flag.png"
 const Select_Input = ({placeholder,type, icon}) => {
   return (
     <div className=" w-full h-10 rounded-lg border border-lineColor flex">
       {icon && (
         <div className="p-2 h-full grid place-items-center">
           <img
-            src="/src/assets/usa-flag.png"
+            src={usaFlag}
             alt="country flag"
             width={25}
             className="bg-white my-auto"

@@ -1,5 +1,7 @@
 import { Footerlinks } from "../../constants";
 import { FaRegCopyright, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
+import logo from "../../assets/AB Autohub Motors logo.png";
+
 
 const Footer = () => {
   return (
@@ -38,7 +40,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex justify-between py-4 px-6">
-          <span className=" text-3xl font-bold text-white">LOGO</span>
+          <img src={logo} alt="company logo" width={100} className=" px-4" />{" "}
           <span className="flex gap-2 items-center text-white text-sm font-light">
             <FaRegCopyright />
             2024 Logo LTD. All Rights Reserved
