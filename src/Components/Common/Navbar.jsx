@@ -1,7 +1,7 @@
 import { FaBell, FaCartShopping, FaChevronDown } from "react-icons/fa6";
-import en_US from "../assets/usa-flag.png"; // Adjust the path as necessary
-import en_UK from "../assets/UK_flag.png"; // Adjust the path as necessary
-import fr_FR from "../assets/fr-flag.png";
+import en_US from "../../assets/usa-flag.png"; // Adjust the path as necessary
+import en_UK from "../../assets/UK_flag.png"; // Adjust the path as necessary
+import fr_FR from "../../assets/fr-flag.png";
 import { useState } from "react";
 import { Navlinks } from "../../constants";
 import { NavLink } from "react-router-dom";
