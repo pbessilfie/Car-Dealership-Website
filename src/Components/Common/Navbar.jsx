@@ -1,11 +1,10 @@
 import { FaBell, FaCartShopping, FaChevronDown } from "react-icons/fa6";
-import en_US from "/src/assets/usa-flag.png"; // Adjust the path as necessary
-import en_UK from "/src/assets/UK_flag.png"; // Adjust the path as necessary
-import fr_FR from "/src/assets/fr-flag.png";
+import en_US from "../assets/usa-flag.png"; // Adjust the path as necessary
+import en_UK from "../assets/UK_flag.png"; // Adjust the path as necessary
+import fr_FR from "../assets/fr-flag.png";
 import { useState } from "react";
 import { Navlinks } from "../../constants";
 import { NavLink } from "react-router-dom";
-import Button from "./Button";
 import "../../App.css";
 import Notification from "../Popups/Notification";
 
@@ -26,9 +25,15 @@ const Navbar = () => {
   return (
     <div className=" sticky top-0 left-0 bg-white flex items-center justify-between font-lato drop-shadow-md px-20 h-20 z-50">
       <div className="relative flex items-center">
-        <span className=" text-3xl font-bold text-primaryTextColor px-4">
+        {/* <span className=" text-3xl font-bold text-primaryTextColor px-4">
           LOGO
-        </span>
+        </span> */}
+        <img
+          src="../assets/AB Autohub Motors logo.png"
+          alt="company logo"
+          width={100}
+          className=" px-4"
+        />
 
         <div
           className=" flex items-center gap-3 border-l-2 px-4 border-lineColor"
@@ -142,7 +147,7 @@ const Navbar = () => {
         <div className=" px-6">
           <div className=" w-12 h-12 rounded-full overflow-hidden cursor-pointer">
             <img
-              src="/src/assets/profile-pic.jpg"
+              src="../assets/profile-pic.jpg"
               alt="profile-pic"
               className="h-full w-full object-cover"
             />
