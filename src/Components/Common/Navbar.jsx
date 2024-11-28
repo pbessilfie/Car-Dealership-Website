@@ -147,7 +147,7 @@ const Navbar = () => {
         <div className=" px-6">
           <div className=" w-12 h-12 rounded-full overflow-hidden cursor-pointer">
             <img
-              src="src/assets/profile-pic.jpg"
+              src="../../assets/profile-pic.jpg"
               alt="profile-pic"
               className="h-full w-full object-cover"
             />
