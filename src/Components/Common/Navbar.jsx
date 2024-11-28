@@ -29,7 +29,7 @@ const Navbar = () => {
           LOGO
         </span> */}
         <img
-          src="../assets/AB Autohub Motors logo.png"
+          src="src/assets/AB Autohub Motors logo.png"
           alt="company logo"
           width={100}
           className=" px-4"
@@ -147,7 +147,7 @@ const Navbar = () => {
         <div className=" px-6">
           <div className=" w-12 h-12 rounded-full overflow-hidden cursor-pointer">
             <img
-              src="../assets/profile-pic.jpg"
+              src="src/assets/profile-pic.jpg"
               alt="profile-pic"
               className="h-full w-full object-cover"
             />
