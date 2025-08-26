@@ -3,6 +3,7 @@ import Button from "../Components/Common/Button";
 import FAQCatNav from "../Components/Common/FAQCatNav";
 import FAQ_Response from "../Components/Common/FAQ_Response";
 import { useState } from "react";
+import helpImgSrc from "/src/assets/faq-mage.jpg";
 
 const Help = () => {
   const [activeCatNav, setActiveCatNav] = useState("General Information");
@@ -11,7 +12,7 @@ const Help = () => {
       <div className=" rounded-xl bg-white drop-shadow-md flex overflow-hidden h-[80vh]">
         <div className="relative w-[40%]">
           <img
-            src="/src/assets/faq-mage.jpg"
+            src={helpImgSrc}
             className=" h-full w-full object-cover"
           />
           <div className="absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.3)] px-16 grid place-items-center">

@@ -8,9 +8,10 @@ import RecentlyRented from "../../Components/Car/RecentlyRented";
 import Car_Brands from "../../Components/Car/Car_Brands";
 import Top_Offers from "../../Components/Car/Top_Offers";
 import { useNavigate } from "react-router";
+import { carCategories } from "../../constants/car-cartegories";
 
 const Browse = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className=" bg-mainBGC p-20 ">
       <div className="flex mx-auto h-[70vh] rounded-xl drop-shadow-md bg-white overflow-hidden">
@@ -84,77 +85,21 @@ const Browse = () => {
             Browse categories
           </h3>
           <div className="flex gap-3 mx-auto">
-            <div className="group relative w-36 h-24 rounded-md overflow-hidden"
-            onClick={()=>navigate('/browse/categories/hatchbacks')}>
-              <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
-                Hatchback
-              </h4>
-              <img
-                src="/src/assets/car-category-photo.png"
-                className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="group relative w-36 h-24 rounded-md overflow-hidden"
-            onClick={()=>navigate('/browse/categories/sedans')}>
-              <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
-                Sedan
-              </h4>
-              <img
-                src="/src/assets/photo_5_2024-07-08_14-35-22 1.png"
-                className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-
-            <div className="group relative w-36 h-24 rounded-md overflow-hidden"
-            onClick={()=>navigate('/browse/categories/coupes')}>
-              <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
-                Coupe
-              </h4>
-              <img
-                src="/src/assets/photo_1_2024-07-08_14-35-22 1.png"
-                className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="group relative w-36 h-24 rounded-md overflow-hidden"
-            onClick={()=>navigate('/browse/categories/vans')}>
-              <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
-                Van
-              </h4>
-              <img
-                src="/src/assets/photo_2_2024-07-08_14-35-22 1.png"
-                className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="group relative w-36 h-24 rounded-md overflow-hidden"
-            onClick={()=>navigate('/browse/categories/suvs')}>
-              <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
-                SUV
-              </h4>
-              <img
-                src="/src/assets/photo_3_2024-07-08_14-35-22 1.png"
-                className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="group relative w-36 h-24 rounded-md overflow-hidden"
-            onClick={()=>navigate('/browse/categories/wagons')}>
-              <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
-                Wagon
-              </h4>
-              <img
-                src="/src/assets/photo_4_2024-07-08_14-35-22 1.png"
-                className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="group relative w-36 h-24 rounded-md overflow-hidden"
-            onClick={()=>navigate('/browse/categories/trucks')}>
-              <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
-                Trucks
-              </h4>
-              <img
-                src="/src/assets/photo_4_2024-07-08_14-35-22 1.png"
-                className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
+            {carCategories.map((category) => (
+              <div
+                key={category.category}
+                className="group relative w-36 h-24 rounded-md overflow-hidden"
+                onClick={() => navigate(category.path)}
+              >
+                <h4 className="text-white text-sm font-semibold absolute top-3 left-3 z-20">
+                  {category.category}
+                </h4>
+                <img
+                  src={category.imgSrc}
+                  className=" object-cover h-full w-full absolute top-0 left-0 z-10 group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

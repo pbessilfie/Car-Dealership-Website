@@ -1,5 +1,6 @@
 import { Cars } from "../../constants";
 import Button from "../Common/Button";
+import topOfferImg from "/src/assets/unsplash_HrbMyWmS7yU.png";
 
 const Top_Offers = () => {
   return (
@@ -14,17 +15,17 @@ const Top_Offers = () => {
       <div className="flex h-96 w-[57vw] rounded-xl overflow-hidden bg-white">
         <div className=" w-[444px] h-full space-y-1">
           <img
-            src="/src/assets/unsplash_HrbMyWmS7yU.png"
+            src={topOfferImg}
             className="w-full h-1/2 object-cover"
           />
           <div className=" flex gap-1 h-1/2 w-full">
             {" "}
             <img
-              src="/src/assets/unsplash_HrbMyWmS7yU.png"
+              src={topOfferImg}
               className=" w-1/2 h-full object-cover"
             />
             <img
-              src="/src/assets/unsplash_HrbMyWmS7yU.png"
+              src={topOfferImg}
               className=" w-1/2 h-full  object-cover"
             />
           </div>
