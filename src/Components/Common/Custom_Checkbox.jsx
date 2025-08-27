@@ -1,40 +1,32 @@
-import { useState, useEffect } from "react";
 import { FaCheck } from "react-icons/fa6";
 import PropTypes from "prop-types";
+import { useCarSearch } from "../../context/car-search-context";
+import { useState } from "react";
 
-const Custom_Checkbox = ({
-  category,
-  selectedCategories,
-  setSelectedCategories,
-  updatedCategories,
-  setSelectedCriteria,
-}) => {
-  const [isChecked, setIsChecked] = useState(false);
+const Custom_Checkbox = ({ id, category }) => {
+  const { setfilterValues } = useCarSearch();
+  const [isChecked, setisChecked] = useState(false);
 
-  useEffect(() => {
-    setIsChecked(selectedCategories.includes(category.category));
-  }, [selectedCategories, category]);
-
-  const handleCheckboxClick = () => {
-    if (isChecked) {
-      updatedCategories = selectedCategories.filter(
-        (cat) => cat !== category.category
-      );
-    } else {
-      updatedCategories = [...selectedCategories, category.category];
-    }
-    setSelectedCategories(updatedCategories);
-    setIsChecked(!isChecked);
-    setSelectedCriteria(updatedCategories);
-    return updatedCategories;
+  const handleCheckboxChange = () => {
+    setisChecked((prev) => !prev);
+    setfilterValues((prev) => {
+      const isCategorySelected = prev.categories.includes(category.category);
+      return {
+        ...prev,
+        categories: isCategorySelected
+          ? prev.categories.filter((cat) => cat !== category.category)
+          : [...prev.categories, category.category],
+      };
+    });
   };
 
   return (
     <div
+      id={id}
       className={`w-5 h-5 border border-lineColor rounded-sm flex items-center justify-center cursor-pointer ${
         isChecked ? "bg-pBlue" : "bg-white"
       }`}
-      onClick={handleCheckboxClick}
+      onClick={handleCheckboxChange}
     >
       {isChecked && <FaCheck className="text-sm font-medium text-white" />}
     </div>
@@ -42,13 +34,8 @@ const Custom_Checkbox = ({
 };
 
 Custom_Checkbox.propTypes = {
-  category: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-  }).isRequired,
-  selectedCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
-  setSelectedCategories: PropTypes.func.isRequired,
-  setSelectedCriteria: PropTypes.func.isRequired,
-  updatedCategories: PropTypes.array,
+  category: PropTypes.object,
+  id: PropTypes.string.isRequired,
 };
 
 export default Custom_Checkbox;
