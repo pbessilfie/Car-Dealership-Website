@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 import Browse from "./Pages/Browse/Browse";
@@ -24,6 +24,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
+      {element: <Navigate to="/browse" replace />, index: true},
       {
         path: "/browse",
         element: <Browse />,
