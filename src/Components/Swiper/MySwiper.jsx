@@ -7,6 +7,7 @@ import "../../App.css";
 
 import { Autoplay } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { swiperImages } from "../../constants/swiper-images";
 
 const SlideButton = () => {
   const swiper = useSwiper();
@@ -46,41 +47,14 @@ export default function MySwiper() {
         modules={[Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className=" w-full h-44 rounded-md border border-lineColor overflow-hidden ">
-            <img
-              src="/src/assets/unsplash_iw0D_9wHnf4.png"
-              className=" h-full w-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className=" w-full h-44 rounded-md border border-lineColor overflow-hidden ">
-            <img
-              src="/src/assets/unsplash_v9ARc6COwfg.png"
-              className=" h-full w-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className=" w-full h-44 rounded-md border border-lineColor overflow-hidden ">
-            <img
-              src="/src/assets/unsplash_9E1o3CsYmm0.png"
-              className=" h-full w-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className=" w-full h-44 rounded-md border border-lineColor overflow-hidden ">
-            <img
-              src="/src/assets/unsplash_HrbMyWmS7yU.png"
-              className=" h-full w-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
+        {swiperImages.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className=" w-full h-44 rounded-md border border-lineColor overflow-hidden ">
+              <img src={image} className=" h-full w-full object-cover" />
+            </div>
+          </SwiperSlide>
+        ))}
+
         {/* <SlideButton /> */}
       </Swiper>
     </div>

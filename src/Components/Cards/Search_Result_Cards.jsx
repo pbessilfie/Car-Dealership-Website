@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa6";
 import Button from "../Common/Button";
-
+import carImgSrc from "/src/assets/unsplash_9E1o3CsYmm0.png";
 const Search_Result_Cards = ({
   reviews,
   mileage,
@@ -11,7 +11,7 @@ const Search_Result_Cards = ({
   condition,
   production_year,
   carName,
-  brand
+  brand,
 }) => {
   const [isFav, setIsFav] = useState(false);
 
@@ -19,7 +19,7 @@ const Search_Result_Cards = ({
     <div className=" w-full h-60 overflow-hidden bg-white flex px-6 py-7 border-b border-lineColor">
       <div className=" relative w-[25%] rounded-md h-full group overflow-hidden ">
         <img
-          src="/src/assets/unsplash_9E1o3CsYmm0.png"
+          src={carImgSrc}
           className=" object-cover h-full w-full group-hover:scale-110 transition-transform duration-500 "
         />
         <button
@@ -99,9 +99,7 @@ const Search_Result_Cards = ({
       <div className=" w-[40%] border-l border-lineColor flex flex-col justify-center gap-5 px-20">
         <Button
           label={"Buy Now"}
-          bstyles={
-            "text-sm text-white text-center py-2 bg-pGreen rounded-md"
-          }
+          bstyles={"text-sm text-white text-center py-2 bg-pGreen rounded-md"}
         />
         <Button
           label={"Add to Cart"}

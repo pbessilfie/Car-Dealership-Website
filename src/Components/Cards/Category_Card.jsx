@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa6";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router";
-
+import categoryImg from "/src/assets/unsplash_9E1o3CsYmm0.png";
 const Category_Card = ({
   carName,
   price,
@@ -32,7 +32,7 @@ const Category_Card = ({
       </button>
       <div className="relative w-2/5 h-full group ">
         <img
-          src="/src/assets/unsplash_9E1o3CsYmm0.png"
+          src={categoryImg}
           className=" object-cover h-full w-full group-hover:scale-110 transition-transform duration-500"
         />
       </div>
