@@ -1,14 +1,27 @@
-import { categories } from "../../constants";
+import { Cars, categories } from "../../constants";
 import Custom_Checkbox from "./Custom_Checkbox";
-import { CiCalendar } from "react-icons/ci";
 import Button from "../Common/Button";
 import Select_Input from "../Common/Select_Input";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useCarSearch } from "../../context/car-search-context";
+import PriceInput from "../ui/price-input";
+import YearInput from "../ui/year-input";
 
-const FilterSidebar = ({ setSelectedCriteria, updatedCategories }) => {
-  const [selectedCategories, setSelectedCategories] = useState([]);
-
+const FilterSidebar = () => {
+  const { filterValues, setfilterValues, setsearchResults } = useCarSearch();
+  const ApplyFilters = () => {
+    const { categories, brands, year, price } = filterValues;
+    const filteredCars = Cars.filter(
+      (car) =>
+        (categories.length === 0 || categories.includes(car.category)) &&
+        (brands === "" || car.brand === brands) &&
+        (year.min === "" || car.year >= year.min) &&
+        (year.max === "" || car.year <= year.max) &&
+        (price.min === 0 || car.price >= price.min) &&
+        (price.max === 0 || car.price <= price.max)
+    );
+    setsearchResults(filteredCars);
+  };
   return (
     <div className=" h-fit bg-white w-80 rounded-md sticky top-24">
       <div className=" w-full p-6 border-b border-lineColor">
@@ -29,47 +42,31 @@ const FilterSidebar = ({ setSelectedCriteria, updatedCategories }) => {
             {" "}
             {categories.map((category, index) => (
               <div key={index} className="flex gap-2 items-center mb-2">
-                <Custom_Checkbox
-                  category={category}
-                  selectedCategories={selectedCategories}
-                  setSelectedCategories={setSelectedCategories}
-                  updatedCategories={updatedCategories}
-                  setUpdatedCategories={updatedCategories}
-                  setSelectedCriteria={setSelectedCriteria}
-                />
-                <span className=" text-sm text-primaryTextColor">
+                <Custom_Checkbox category={category} id={category} />
+                <lable
+                  htmlFor={category}
+                  className=" text-sm text-primaryTextColor"
+                >
                   {category.category}
-                </span>
+                </lable>
               </div>
             ))}
           </div>
 
           {/* brand select input */}
-          <Select_Input placeholder={"Enter a brand name"} />
+          <Select_Input
+            type={"text"}
+            placeholder={"Enter a brand name"}
+            handleChange={(e) => {
+              const { value } = e.target;
+              setfilterValues((prev) => ({ ...prev, brands: value }));
+            }}
+          />
 
           <div className=" flex items-center justify-between">
-            <div className=" w-[100px] h-10 rounded-lg border border-lineColor flex">
-              <input
-                type="text"
-                placeholder="Year"
-                className=" w-2/3 h-full bg-transparent outline-none border-none placeholder:text-base placeholder:font-medium placeholder:text-secondaryTextColor2 p-2 text-primaryTextColor"
-              />{" "}
-              <div className=" w-10 h-full border-l border-lineColor flex items-center justify-center">
-                <CiCalendar className="text-primaryTextColor text-2xl " />
-              </div>
-            </div>
-
+            <YearInput mode={"min"} />
             <div className=" bg-lineColor rounded-3xl h-[2px] w-4"></div>
-            <div className=" w-[100px] h-10 rounded-lg border border-lineColor flex">
-              <input
-                type="text"
-                placeholder="Year"
-                className=" w-2/3 h-full bg-transparent outline-none border-none placeholder:text-base placeholder:font-medium placeholder:text-secondaryTextColor2 p-2 text-primaryTextColor"
-              />{" "}
-              <div className=" w-10 h-full border-l border-lineColor flex items-center justify-center">
-                <CiCalendar className="text-primaryTextColor text-2xl " />
-              </div>
-            </div>
+            <YearInput mode={"max"} />
           </div>
         </div>
 
@@ -83,39 +80,10 @@ const FilterSidebar = ({ setSelectedCriteria, updatedCategories }) => {
           </div>
 
           {/* price range */}
-          <div className=" flex items-center justify-between">
-            <div>
-              <label className=" text-xs text-secondaryTextColor">
-                From:{" "}
-                <div className="relative w-[100px] mt-3 h-10 rounded-lg border border-lineColor">
-                  <div className=" absolute -top-2 left-3 bg-white px-1 py-px ">
-                    <span className=" text-xs text-primaryTextColor">Min</span>
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Price"
-                    className=" w-full h-full bg-transparent outline-none border-none placeholder:text-base placeholder:font-medium placeholder:text-secondaryTextColor2 placeholder:text-center text-base text-center p-2 text-primaryTextColor"
-                  />{" "}
-                </div>
-              </label>
-            </div>
-
+          <div className=" flex items-center justify-between ">
+            <PriceInput limit="Min" />
             <div className=" bg-lineColor rounded-3xl h-[2px] w-4"></div>
-            <div>
-              <label className=" text-xs text-secondaryTextColor">
-                To:{" "}
-                <div className="relative w-[100px] mt-3 h-10 rounded-lg border border-lineColor">
-                  <div className=" absolute -top-2 left-3 bg-white px-1 py-px ">
-                    <span className=" text-xs text-primaryTextColor">Min</span>
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Price"
-                    className=" w-full h-full bg-transparent outline-none border-none placeholder:text-base placeholder:font-medium placeholder:text-secondaryTextColor2 placeholder:text-center text-base text-center p-2 text-primaryTextColor"
-                  />{" "}
-                </div>
-              </label>
-            </div>
+            <PriceInput limit="Max" />
           </div>
         </div>
 
@@ -125,10 +93,7 @@ const FilterSidebar = ({ setSelectedCriteria, updatedCategories }) => {
               "text-white bg-pBlue py-3 text-center text-base rounded-md cursor:pointer"
             }
             label={"Apply Filters"}
-            // handleClick={() => {
-            //   // setSelectedCriteria(updatedCategories);
-            //   // console.log(updatedCategories);
-            // }}
+            handleClick={ApplyFilters}
           />
         </div>
       </div>
