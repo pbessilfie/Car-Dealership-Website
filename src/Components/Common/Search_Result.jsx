@@ -3,26 +3,17 @@ import Select_Input from "./Select_Input";
 import { useState } from "react";
 import { BsFillGridFill, BsGrid } from "react-icons/bs";
 import Search_Result_Cards from "../Cards/Search_Result_Cards";
-import { Cars } from "../../constants";
 import Car_Card from "../Cards/Car_Card";
-import PropTypes from "prop-types";
-const Search_Result = ({
-  selectedCriteria,
-  // setSelectedCriteria,
-  // updatedCategories,
-  // setUpdatedCategories,
-}) => {
+import { useCarSearch } from "../../context/car-search-context";
+const Search_Result = () => {
   const [gridview, setGridview] = useState(false);
   const [listview, setListview] = useState(true);
-  // console.log(selectedCriteria);
-  const filterResults = Cars.filter((car) =>
-    selectedCriteria.includes(car.category)
-  );
+  const { searchResults } = useCarSearch();
   return (
-    <div className=" bg-white rounded-md w-[60%]">
+    <div className=" bg-white rounded-md w-[60%] flex flex-col">
       <header className="flex items-center justify-between px-6 py-4 border-b border-lineColor">
         <span className=" text-xl font-semibold text-primaryTextColor">
-          {filterResults.length} matches
+          {searchResults.length === 0 ? "No" : searchResults.length} matches
         </span>
 
         <div className=" flex items-center gap-12">
@@ -59,48 +50,48 @@ const Search_Result = ({
         </div>
       </header>
       <div
-        className={
+        className={`overflow-y-scroll h-full border flex-1 ${
           listview
             ? " flex flex-col"
-            : "grid grid-cols-3 place-items-center py-6 gap-y-8 px-24"
-        }
+            : "grid grid-cols-3 place-items-center py-6 gap-y-8 px-24 "
+        }`}
       >
-        {" "}
-        {filterResults.map((car, index) => (
-          <div key={index}>
-            {listview ? (
-              <Search_Result_Cards
-                carName={car.Carname}
-                price={car.price}
-                condition={car.condition}
-                production_year={car.production_year}
-                reviews={car.reviews}
-                brand={car.brand}
-                mileage={car.mileage}
-                category={car.category}
-              />
-            ) : (
-              <Car_Card
-                carName={car.Carname}
-                price={car.price}
-                condition={car.condition}
-                production_year={car.production_year}
-                reviews={car.reviews}
-                brand={car.brand}
-                mileage={car.mileage}
-                category={car.category}
-              />
-            )}
+        {searchResults.length === 0 ? (
+          <div className="text-sm font-medium h-full w-full flex items-center justify-center border">
+            No matches found
           </div>
-        ))}
+        ) : (
+          searchResults.map((car, index) => (
+            <div key={index}>
+              {listview ? (
+                <Search_Result_Cards
+                  carName={car.Carname}
+                  price={car.price}
+                  condition={car.condition}
+                  production_year={car.production_year}
+                  reviews={car.reviews}
+                  brand={car.brand}
+                  mileage={car.mileage}
+                  category={car.category}
+                />
+              ) : (
+                <Car_Card
+                  carName={car.Carname}
+                  price={car.price}
+                  condition={car.condition}
+                  production_year={car.production_year}
+                  reviews={car.reviews}
+                  brand={car.brand}
+                  mileage={car.mileage}
+                  category={car.category}
+                />
+              )}
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
 };
-Search_Result.propTypes = {
-  selectedCriteria: PropTypes.object,
-  // setSelectedCriteria: PropTypes.func,
-  // updatedCategories: PropTypes.array,
-  // setUpdatedCategories: PropTypes.array,
-};
+
 export default Search_Result;

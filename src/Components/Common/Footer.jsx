@@ -4,6 +4,7 @@ import logo from "../../assets/AB Autohub Motors logo.png";
 
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="bg-[#31373e] flex flex-col items-center justify-center py-24">
       <div className="">
@@ -43,7 +44,7 @@ const Footer = () => {
           <img src={logo} alt="company logo" width={100} className=" px-4" />{" "}
           <span className="flex gap-2 items-center text-white text-sm font-light">
             <FaRegCopyright />
-            2024 Logo LTD. All Rights Reserved
+            {year} Logo LTD. All Rights Reserved
           </span>
         </div>
       </div>
